@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>psy-m</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-ipad-retina.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-iphone.png" />
+    <link href="css/swipe.min.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/modernizr.custom.46516.js"></script>
+    <script src="js/swipe.min.js"></script>
+    <script src="js/webapp.swipe.js"></script>
+    <script src="js/vender/wavesurfer.min.js"></script>
+    <script src="js/vender/require.js"></script>
+    <script src="js/requireJs-config.js"></script>
+    <script>
+        $(function () {
+            var needSwiper = [
+			    {
+			        containerId: 'swiper1',
+			        prev: '.swipe-prev',
+			        next: '.swipe-next',
+			        auto:5000,
+			    },
+                {
+                    containerId: 'swiper2',
+                    prev: '.swipe-prev',
+                    next: '.swipe-next',
+                    auto:0,
+                }
+            ];
+
+            $.each(needSwiper, function () {
+                var s = new webapp.swipe({
+                    containerId: this.containerId,
+                    prev: this.prev,
+                    next: this.next,
+                    auto: this.auto,
+                    callback: function (index, elem) {
+                    }
+                });
+
+            });
+
+
+            require(['videoPlayer'], function (videoPlayer) {
+                videoPlayer.init({
+                    ele: $('.video-item'),
+                    ended: function () {
+
+                    }
+                });
+            });
+
+
+            //mp3
+            var wavesurfer = Object.create(WaveSurfer);
+
+            wavesurfer.init({
+                container: document.querySelector('#waveform'),
+                waveColor: '#5c5c5c',
+                progressColor: 'black',
+                height:25
+            });
+
+            wavesurfer.on('ready', function () {
+
+            });
+
+            wavesurfer.load('mp3/The%20Guess%20Who%20-%20American%20Woman.mp3');
+
+            $('#audioPlay').click(function () {
+                //if (wavesurfer.) {
+
+                //}
+                wavesurfer.playPause();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <header class="index-top">
+        <span class="fr">
+            <a href="" class="icon icon-user"></a>
+            <a href="" class="icon icon-search"></a>
+        </span>
+        <span class="logo">育儿心理</span>
+        <span class="type">0-3岁宝宝</span>
+    </header>
+
+    <div id="swiper1" class="swipe">
+        <div class="swipe-wrap">
+            <a href="#"><img src="images/banner-1.jpg" /></a>
+            <a href="#"><img src="images/banner-1.jpg" /></a>
+            <a href="#"><img src="images/banner-1.jpg" /></a>
+            <a href="#"><img src="images/banner-1.jpg" /></a>
+        </div>
+    </div>
+
+    <section class="index-nav layout-box">
+        <a href="" class="video">视频</a>
+        <a href="" class="audio">音频</a>
+        <a href="" class="article">文章</a>
+    </section>
+    <div class="index-view-all">
+        <a href="" class="btn">View ALL</a>
+    </div>
+
+    <!--video: start-->
+    <div id="swiper2" class="swipe">
+        <div class="swipe-wrap">
+            <div class="video-item" style="background-image: url(images/sample-1.png); ">
+                <h2>孩子的教育问题</h2>
+                <p>
+                    <span class="watched">3216</span>
+                    <span>|</span>
+                    <span class="like">3216</span>
+                </p>
+                <div class="control">
+                    <span class="zoom"></span>
+                    <span class="time">08:00</span>
+                </div>
+                <video width="100%" controls="controls" preload="none" poster="images/sample-1.png">
+                    <source type="video/mp4" src="http://k.youku.com/player/getFlvPath/sid/142115770825512558849_00/st/mp4/fileid/030020010054A91333C83A003E88036C2A4CA5-C9B4-A458-08D8-5B7A083122DD?K=a558eefdff29c19a282a2a62&hd=0&myp=0&ts=394&ypp=0&ctype=10&ev=1&token=7509&oip=2130706433&ep=1acs6ZtvKkzyi4bBWRq%2BpWCpDtPB7HeDmeBbPSXzxd9n3qEohnAdfYNxTuSXnzzxeoZ7Qfs%2FVgZmgcrOFMJepKF7g%2FcvQ3O7UkdE0hvuVvhv%2F1J9AXZJamRAVr2wdOWdasEq308R7MOC9U%3D" />
+                </video>
+            </div>
+            <div class="video-item" style="background-image: url(images/sample-1.png); ">
+                <h2>孩子的教育问题</h2>
+                <p>
+                    <span class="watched">3216</span>
+                    <span>|</span>
+                    <span class="like">3216</span>
+                </p>
+                <div class="control">
+                    <span class="zoom"></span>
+                    <span class="time">08:00</span>
+                </div>
+                <video width="100%" controls="controls" preload="none" poster="images/sample-1.png">
+                    <source type="video/mp4" src="http://k.youku.com/player/getFlvPath/sid/142115770825512558849_00/st/mp4/fileid/030020010054A91333C83A003E88036C2A4CA5-C9B4-A458-08D8-5B7A083122DD?K=a558eefdff29c19a282a2a62&hd=0&myp=0&ts=394&ypp=0&ctype=10&ev=1&token=7509&oip=2130706433&ep=1acs6ZtvKkzyi4bBWRq%2BpWCpDtPB7HeDmeBbPSXzxd9n3qEohnAdfYNxTuSXnzzxeoZ7Qfs%2FVgZmgcrOFMJepKF7g%2FcvQ3O7UkdE0hvuVvhv%2F1J9AXZJamRAVr2wdOWdasEq308R7MOC9U%3D" />
+                </video>
+            </div>
+            <div class="video-item" style="background-image: url(images/sample-1.png); ">
+                <h2>孩子的教育问题</h2>
+                <p>
+                    <span class="watched">3216</span>
+                    <span>|</span>
+                    <span class="like">3216</span>
+                </p>
+                <div class="control">
+                    <span class="zoom"></span>
+                    <span class="time">08:00</span>
+                </div>
+                <video width="100%" controls="controls" preload="none" poster="images/sample-1.png">
+                    <source type="video/mp4" src="http://k.youku.com/player/getFlvPath/sid/142115770825512558849_00/st/mp4/fileid/030020010054A91333C83A003E88036C2A4CA5-C9B4-A458-08D8-5B7A083122DD?K=a558eefdff29c19a282a2a62&hd=0&myp=0&ts=394&ypp=0&ctype=10&ev=1&token=7509&oip=2130706433&ep=1acs6ZtvKkzyi4bBWRq%2BpWCpDtPB7HeDmeBbPSXzxd9n3qEohnAdfYNxTuSXnzzxeoZ7Qfs%2FVgZmgcrOFMJepKF7g%2FcvQ3O7UkdE0hvuVvhv%2F1J9AXZJamRAVr2wdOWdasEq308R7MOC9U%3D" />
+                </video>
+            </div>
+        </div>
+    </div>
+    <!--video: end-->
+
+
+    <section class="index-audio mt10 layout-box">
+        <div class="art-work" style="background-image: url(images/sample-1.png);"></div>
+        <div class="audio-info">
+            <div class="audio-info-row-1 layout-box layout-between">
+                <button id="audioPlay" type="button" class="btn btn-audio-play mr10"></button>
+                <div class="info">
+                    <p class="title">孩子的教育问题</p>
+                    <p class="time">2014-12-25</p>
+                </div>
+                <div class="tools">
+                    <span class="icon icon-like"></span>
+                    <span class="icon icon-share"></span>
+                </div>
+            </div>
+            <div id="waveform" class="waveform">
+                <span class="time">5:30</span>
+            </div>
+            <div class="statistic-wrap">
+                <span class="icon icon-watched">3216</span>
+                <span class="split">|</span>
+                <span class="icon icon-liked">3216</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="index-list layout-box layout-between mt10">
+        <div class="index-list-item">
+            <a class="pic" style="background-image: url(images/banner-1.jpg);"></a>
+            <div class="desc">
+                <p>孩子的教育问题在哪？</p>
+                <div class="statistic-wrap">
+                    <span class="icon icon-watched">3216</span>
+                    <span class="split">|</span>
+                    <span class="icon icon-liked">3216</span>
+                </div>
+            </div>
+        </div>
+        <div class="index-list-item">
+            <a class="pic" style="background-image: url(images/banner-1.jpg);"></a>
+            <div class="desc">
+                <p>孩子的教育问题在哪？</p>
+                <div class="statistic-wrap">
+                    <span class="icon icon-watched">3216</span>
+                    <span class="split">|</span>
+                    <span class="icon icon-liked">3216</span>
+                </div>
+            </div>
+        </div>
+        <div class="index-list-item">
+            <a class="pic" style="background-image: url(images/banner-1.jpg);"></a>
+            <div class="desc">
+                <p>孩子的教育问题在哪？</p>
+                <div class="statistic-wrap">
+                    <span class="icon icon-watched">3216</span>
+                    <span class="split">|</span>
+                    <span class="icon icon-liked">3216</span>
+                </div>
+            </div>
+        </div>
+        <div class="index-list-item">
+            <a class="pic" style="background-image: url(images/banner-1.jpg);"></a>
+            <div class="desc">
+                <p>孩子的教育问题在哪？</p>
+                <div class="statistic-wrap">
+                    <span class="icon icon-watched">3216</span>
+                    <span class="split">|</span>
+                    <span class="icon icon-liked">3216</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tc loading-wrap">
+        <span class="loading"></span>
+    </div>
+
+    <section class="index-finder">
+        <h2>需要更专业的咨询么？</h2>
+        <div>
+            <a href="" class="btn btn-h56">寻找咨询师</a>
+        </div>
+    </section>
+
+
+    <section class="site-footer">
+        <div>京ICP备 0091918181号</div>
+    </section>
+
+
+    <div class="site-toolbar">
+        <ul class="layout-box layout-between">
+            <li class="item-1"><a href="#"></a></li>
+            <li class="item-2"><a href="#"></a></li>
+            <li class="item-3"><a href="#"></a></li>
+            <li class="item-4"><a href="#"></a></li>
+        </ul>
+    </div>
+</body>
+</html>

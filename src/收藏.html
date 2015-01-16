@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>psy-m</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-ipad-retina.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-iphone.png" />
+    <link href="css/swipe.min.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/modernizr.custom.46516.js"></script>
+    <script src="js/swipe.min.js"></script>
+    <script src="js/webapp.swipe.js"></script>
+    <script src="js/vender/wavesurfer.min.js"></script>
+    <script src="js/vender/require.js"></script>
+    <script src="js/requireJs-config.js"></script>
+    <script src="js/img-resize.min.js"></script>
+    <script>
+        $(function () {
+            
+            //tab切换
+            var needSwiper = [
+               {
+                   containerId: 'swiper2',
+                   navId: 'swipe-nav2'
+               }
+            ];
+
+            $.each(needSwiper, function () {
+                var s = new webapp.swipe({
+                    containerId: this.containerId,
+                    navId: this.navId,
+                    prev: this.prev,
+                    next: this.next,
+                    auto: this.auto || 0,
+                    callback: function (index, elem) {
+                    }
+                });
+
+            });
+
+        });
+    </script>
+</head>
+<body class="gray">
+    <header class="site-top layout-box layout-between">
+        <a href="" class="btnback"></a>
+        <span class="page-title">我的收藏</span>
+        <span class="menu-more">&nbsp;</span>
+    </header>
+
+    <ul id="swipe-nav2" class="tab layout-box layout-between">
+        <li class="cur">收藏顾问</li>
+        <li>收藏文章</li>
+    </ul>
+    <div id="swiper2" class="swipe">
+        <div class="swipe-wrap">
+            <!--收藏顾问：start-->
+            <div>
+                <div class="fav-advisor">
+                    <div class="fav-advisor-item layout-box layout-between">
+                        <a href="" class="avatar" style="background-image: url(images/sample-3.png); "></a>
+                        <div>
+                            <p class="name">王旭染</p>
+                            <p class="title">国家二级心理咨询师</p>
+                        </div>
+                        <span class="icon icon-location">北京</span>
+                    </div>
+                    <div class="fav-advisor-item layout-box layout-between">
+                        <a href="" class="avatar" style="background-image: url(images/sample-3.png); "></a>
+                        <div>
+                            <p class="name">王旭染</p>
+                            <p class="title">国家二级心理咨询师</p>
+                        </div>
+                        <span class="icon icon-location">北京</span>
+                    </div>
+                    <div class="fav-advisor-item layout-box layout-between">
+                        <a href="" class="avatar" style="background-image: url(images/sample-3.png); "></a>
+                        <div>
+                            <p class="name">王旭染</p>
+                            <p class="title">国家二级心理咨询师</p>
+                        </div>
+                        <span class="icon icon-location">北京</span>
+                    </div>
+                    <div class="fav-advisor-item layout-box layout-between">
+                        <a href="" class="avatar" style="background-image: url(images/sample-3.png); "></a>
+                        <div>
+                            <p class="name">王旭染</p>
+                            <p class="title">国家二级心理咨询师</p>
+                        </div>
+                        <span class="icon icon-location">北京</span>
+                    </div>
+                </div>
+            </div>
+            <!--收藏顾问：end-->
+            <!--收藏文章：start-->
+            <div class="fav-article">
+                <div class="fav-article-item layout-box layout-between">
+                    <a href="" class="pic" style="background-image: url(images/sample-3.png); "></a>
+                    <div>
+                        <h2><a href="#">孩子的教育问题在哪？</a></h2>
+                        <p><a href="#">自然妈妈<span class="red">公社拥有一个签约</span>专业指导师团队，具备相关领域专业资质，充满爱心和耐心，有能力和意愿为更多的准妈妈和妈妈们创造各种各样的，有趣有爱有用的学习坊。自然妈妈公社致力于帮助准妈妈或妈妈们全方位提升个人生活品质、打造美满和智慧的家庭关系、增强亲子养育及早教能力。</a></p>
+                    </div>
+                </div>
+                <div class="fav-article-item layout-box layout-between">
+                    <a href="" class="pic" style="background-image: url(images/sample-3.png); "></a>
+                    <div>
+                        <h2><a href="#">孩子的教育问题在哪？</a></h2>
+                        <p><a href="#">自然妈妈<span class="red">公社拥有一个签约</span>专业指导师团队，具备相关领域专业资质，充满爱心和耐心，有能力和意愿为更多的准妈妈和妈妈们创造各种各样的，有趣有爱有用的学习坊。自然妈妈公社致力于帮助准妈妈或妈妈们全方位提升个人生活品质、打造美满和智慧的家庭关系、增强亲子养育及早教能力。</a></p>
+                    </div>
+                </div>
+                <div class="fav-article-item layout-box layout-between">
+                    <a href="" class="pic" style="background-image: url(images/sample-3.png); "></a>
+                    <div>
+                        <h2><a href="#">孩子的教育问题在哪？</a></h2>
+                        <p><a href="#">自然妈妈<span class="red">公社拥有一个签约</span>专业指导师团队，具备相关领域专业资质，充满爱心和耐心，有能力和意愿为更多的准妈妈和妈妈们创造各种各样的，有趣有爱有用的学习坊。自然妈妈公社致力于帮助准妈妈或妈妈们全方位提升个人生活品质、打造美满和智慧的家庭关系、增强亲子养育及早教能力。</a></p>
+                    </div>
+                </div>
+                <div class="fav-article-item layout-box layout-between">
+                    <a href="" class="pic" style="background-image: url(images/sample-3.png); "></a>
+                    <div>
+                        <h2><a href="#">孩子的教育问题在哪？</a></h2>
+                        <p><a href="#">自然妈妈<span class="red">公社拥有一个签约</span>专业指导师团队，具备相关领域专业资质，充满爱心和耐心，有能力和意愿为更多的准妈妈和妈妈们创造各种各样的，有趣有爱有用的学习坊。自然妈妈公社致力于帮助准妈妈或妈妈们全方位提升个人生活品质、打造美满和智慧的家庭关系、增强亲子养育及早教能力。</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--收藏文章：end-->
+        </div>
+    </div>
+    
+
+    <section class="site-footer">
+        <div>京ICP备 0091918181号</div>
+    </section>
+
+
+    <div class="site-toolbar">
+        <ul class="layout-box layout-between">
+            <li class="item-1"><a href="#"></a></li>
+            <li class="item-2"><a href="#"></a></li>
+            <li class="item-3"><a href="#"></a></li>
+            <li class="item-4"><a href="#"></a></li>
+        </ul>
+    </div>
+</body>
+</html>
